@@ -3,11 +3,12 @@ class FizzBuzz
   def is_divisible_by(number, divisor)
     number % divisor == 0
   end
-
+# is_divisible_by method was previously defined after it was called
   def play(number)
-    return "fizzbuzz" if is_divisible_by(number, 15)
-    return "fizz" if is_divisible_by(number, 3)
-    return "buzz" if is_divisible_by(number, 5)
+    return "fizzbuzz" if is_divisible_by(number, 15)# parameter name was different to argument parameter to method therefore num was undefined
+
+    return "fizz" if is_divisible_by(number, 3) #comma was missing in this line
+    return "buzz" if is_divisible_by(number, 5) #comma missing, therefore wrong number of parameters
     number
   end
 
